@@ -10,19 +10,14 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-app.get("/burger", function(req, res) {
+  //routes
+  app.get("/burgers", function(req, res){
     res.render("burger_name", {
-      foods: Burger,
+      foods: burger, 
     });
   });
-
-
-  //routes
   var routes = require(path.join(__dirname, '/config/conrollers/burgers_controllers.js'))(app);
-  
-
-  /
-  //app.use('/', routes);
+  app.use('/', routes);
   
   // Start our server so that it can begin listening to client requests.
   app.listen(PORT, function() {
