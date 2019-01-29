@@ -7,3 +7,4 @@
  devoured tinyint(1),
  PRIMARY KEY (id));
  
+ -- BOOLEAN DEFAULT false
