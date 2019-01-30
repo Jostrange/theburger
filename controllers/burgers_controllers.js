@@ -9,9 +9,11 @@ var burger = require('../models/burger.js');
 const burgerController = function(app){
 // Create the routes and associated logic
 app.get('/', function(req, res) {
-  burger.selectAll(function(data) {
+  burger.selectAll(function(burgers) {
+    console.log(burgers);
     var hbsObject = {
-      burgers: data
+      burgers: burgers,
+      layout: 'main',
     };
     // console.log(hbsObject);
     res.render('index', hbsObject);
