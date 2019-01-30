@@ -3,7 +3,7 @@ var exphbs = require("express-handlebars");
 var path = require('path');
 const bodyParser = require('body-parser');
 
-
+const BurgerController = require(path.join(__dirname, '/controllers/burgers_controllers.js'));
 
 
 var app = express();
@@ -16,13 +16,8 @@ app.set("view engine", "handlebars");
 
 
   //routes
-  app.get("/burgers", function(req, res){
-    res.render("burger_name", {
-      foods: burger, 
-    });
-  });
-  var routes = require(path.join(__dirname, '/controllers/burgers_controllers.js'))(app);
-  //app.use('/', routes);
+
+  BurgerController(app);
   
   // Start our server so that it can begin listening to client requests.
   app.listen(PORT, function() {
