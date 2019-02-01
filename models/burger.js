@@ -4,7 +4,7 @@ var orm = require('../config/orm.js');
 var burger = {
     // Select all burger table entries
     selectAll: function(cb) {
-      orm.selectAll('menu', function(res) {
+      orm.selectAll('results', function(res) {
         cb(res);
       });
     },
@@ -18,14 +18,14 @@ var burger = {
   
     // The objColVals is an object specifying columns as object keys with associated values
     updateOne: function(objColVals, condition, cb) {
-      orm.updateOne('menu', objColVals, condition, function(res) {
+      orm.updateOne(objColVals, objColVals, condition, function(res) {
         cb(res);
       });
     },
 
     // The objColVals is an object specifying columns as object keys with associated values
     deleteOne: function(condition, cb) {
-      orm.deleteOne('menu', condition, function(res) {
+      orm.deleteOne('1', condition, function(res) {
         cb(res);
       });
     }

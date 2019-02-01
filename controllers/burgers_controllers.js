@@ -30,9 +30,7 @@ const burgerController = function (app) {
 
   app.post('/burgers/:id', function (req, res) {
     console.log('hi');
-    burger.updateOne({
-      devoured: true
-    });
+    burger.updateOne(req.params.id);
     res.redirect('/');
   });
 }
