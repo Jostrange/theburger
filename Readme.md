@@ -6,7 +6,7 @@ like and then devouring the burger of their choice after creating the menu.
 ## Application Heroku Link
 The link below will give you direct access to The Burger web application using your web browser via the Heroku web service. 
 
-<!-- Heroku References: https://jstheburger.herokuapp.com/
+< Heroku References: https://jstheburger.herokuapp.com/
 
 -- Local Environment Setup
 To use The Burger web application application from your local environment, you must accomplish the following steps below:
