@@ -8,10 +8,10 @@ The link below will give you direct access to The Burger web application using y
 
 < Heroku References: https://jstheburger.herokuapp.com/
 
--- Local Environment Setup
+**Local Environment Setup
 To use The Burger web application application from your local environment, you must accomplish the following steps below:
 
---Step 1 - Clone my repo using the command line below.**
+**Step 1 - Clone my repo using the command line below.**
 ```
 git clone https://github.com/jostrange/theburger.git
 ```
